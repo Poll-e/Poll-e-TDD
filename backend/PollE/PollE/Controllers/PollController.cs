@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -13,7 +11,6 @@ namespace PollE.Controllers
     [Route("polls")]
     public class PollController : ControllerBase
     {
-        
         private readonly ILogger<PollController> _logger;
         private readonly IPollService _pollService;
 

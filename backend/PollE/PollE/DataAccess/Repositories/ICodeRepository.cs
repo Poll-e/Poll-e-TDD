@@ -6,6 +6,5 @@ namespace PollE.DataAccess.Repositories
     public interface ICodeRepository
     {
         public Task<CodeEntity> InsertCodeAsync(string code);
-
     }
 }

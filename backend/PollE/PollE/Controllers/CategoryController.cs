@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using PollE.Controllers.DTOs;
 
 namespace PollE.Controllers
 {
@@ -18,7 +14,7 @@ namespace PollE.Controllers
         {
             _logger = logger;
         }
-        
+
 
         [HttpGet]
         public IActionResult Get()

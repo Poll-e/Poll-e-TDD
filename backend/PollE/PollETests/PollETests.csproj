@@ -13,10 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="ControllerTests" />
-      <Folder Include="IntegrationTests" />
-      <Folder Include="RepositoryTests" />
-      <Folder Include="ServiceTests" />
+      <ProjectReference Include="..\PollE\PollE.csproj" />
     </ItemGroup>
 
 </Project>
