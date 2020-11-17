@@ -10,7 +10,7 @@ namespace PollETests.RepositoryTests
         [SetUp]
         public void SetUp()
         {
-            //Create codeRepository
+            pollRepository = new InMemoryPollRepository();
         }
 
         private IPollRepository pollRepository;

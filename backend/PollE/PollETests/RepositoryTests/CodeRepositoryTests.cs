@@ -9,7 +9,7 @@ namespace PollETests.RepositoryTests
         [SetUp]
         public void SetUp()
         {
-            //Create codeRepository
+            codeRepository = new InMemoryCodeRepository();
         }
 
         private ICodeRepository codeRepository;
@@ -21,7 +21,7 @@ namespace PollETests.RepositoryTests
             var code = "123456789";
 
             //Act
-            var result = codeRepository.InsertCodeAsync("").Result;
+            var result = codeRepository.InsertCodeAsync(code).Result;
 
             //Assert
 
