@@ -1,6 +1,10 @@
-﻿using System;
+﻿﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PollE.Controllers.DTOs;
 
 namespace PollE.Controllers
 {
@@ -14,12 +18,24 @@ namespace PollE.Controllers
         {
             _logger = logger;
         }
-
+        
+        private readonly List<string> categories = new List<string>()
+        {
+            "Restaurants",
+            "Books",
+            "Hotels",
+            "Drinks",
+            "Sports",
+            "Foods",
+            "Movies",
+            "Girls",
+            "Cars"
+        };
 
         [HttpGet]
         public IActionResult Get()
         {
-            throw new NotImplementedException();
+            return Ok(categories);
         }
     }
 }
