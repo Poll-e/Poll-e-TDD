@@ -1,6 +1,9 @@
 ﻿using System.Text.RegularExpressions;
+using Moq;
 using NUnit.Framework;
 using PollE.DataAccess.DataService;
+using PollE.DataAccess.Entities;
+using PollE.DataAccess.Repositories;
 
 namespace PollETests.ServiceTests
 {
@@ -10,6 +13,10 @@ namespace PollETests.ServiceTests
         [SetUp]
         public void SetUp()
         {
+            var mock = new Mock<ICodeRepository>();
+                mock.Setup(x => x.InsertCodeAsync(It.IsAny<string>()))
+                .ReturnsAsync(new CodeEntity(){Id = 1, Code = "123456"});
+            service = new CodeService(mock.Object);
         }
 
         private ICodeService service;

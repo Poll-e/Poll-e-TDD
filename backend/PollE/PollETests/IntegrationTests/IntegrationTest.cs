@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using PollE.Controllers.DTOs;
 using PollE.DataAccess.DataService;
+using PollE.DataAccess.Repositories;
 
 namespace PollETests.IntegrationTests
 {
@@ -10,6 +11,8 @@ namespace PollETests.IntegrationTests
         [SetUp]
         public void SetUp()
         {
+            
+            pollService = new PollService(new InMemoryPollRepository(), new CodeService(new InMemoryCodeRepository()));
         }
 
         private IPollService pollService;
